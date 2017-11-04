@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
 
 namespace MyCalculator
 {
@@ -30,18 +31,17 @@ namespace MyCalculator
                             result = number1 * number2;
                             break;
                         case"/":
-                            if(number2 != 0.0)
-                            result = number1 / number2;
+                            if(number2 != 0)
+                                result = number1 / number2;
                             else
-                            {
                                 Console.WriteLine("Denominator=0. Dividing by 0 is forbidden.");
-                            }
                             break;    
                         default:
                             Console.WriteLine("Something is no yes... Input is not a mathematical expression.");
                             break;
                     }
-                    Console.WriteLine("Result is: "+result);
+                    //Console.WriteLine("Result is: "+result);
+                    Console.WriteLine($"Result is: {result}");
                     Console.ReadLine();
                 }
     }
